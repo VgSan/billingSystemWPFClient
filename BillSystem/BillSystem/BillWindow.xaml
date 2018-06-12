@@ -1,0 +1,31 @@
+﻿<Controls:MetroWindow x:Class="BillSystem.BillWindow"
+                      
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BillSystem"
+        mc:Ignorable="d"
+        Title="Bill Window" Height="397.86" Width="629.302" IsMinButtonEnabled="False" IsMaxRestoreButtonEnabled="False" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Closed="MetroWindow_Closed">
+    <Grid Height="363" VerticalAlignment="Top">
+
+
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition Width="221*"/>
+            <ColumnDefinition Width="400*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox DataContext="{Binding CurrentLocation}"   HorizontalAlignment="Left" Height="23" Margin="35,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="126" Controls:TextBoxHelper.Watermark="Bill No" Controls:TextBoxHelper.WatermarkAlignment="Justify" TextAlignment="Center" Text="{Binding 1, Mode=TwoWay, ValidatesOnExceptions=True}"/>
+        <ComboBox  HorizontalAlignment="Left" Margin="35,92,0,0" VerticalAlignment="Top" Width="438" Grid.ColumnSpan="2" Controls:TextBoxHelper.Watermark="Select the Company" Controls:TextBoxHelper.WatermarkAlignment="Justify"/>
+        <ComboBox HorizontalAlignment="Left" Margin="35,142,0,0" VerticalAlignment="Top" Width="177" Controls:TextBoxHelper.Watermark="Select the Bowser" Controls:TextBoxHelper.WatermarkAlignment="Justify"/>
+        <ComboBox HorizontalAlignment="Left" Margin="0,142,0,0" VerticalAlignment="Top" Width="251" Controls:TextBoxHelper.Watermark="Select the Employee" Controls:TextBoxHelper.WatermarkAlignment="Justify" Grid.Column="1"/>
+        <TextBox  HorizontalAlignment="Left" Height="23" Margin="35,197,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="177" Controls:TextBoxHelper.Watermark="Quntity" Controls:TextBoxHelper.WatermarkAlignment="Justify" TextAlignment="Center"/>
+        <TextBox  HorizontalAlignment="Left" Height="23" Margin="0,197,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="251" Controls:TextBoxHelper.Watermark="Bill Total" Controls:TextBoxHelper.WatermarkAlignment="Justify" TextAlignment="Center" Grid.Column="1"/>
+        <Button Content="Save" HorizontalAlignment="Left" Margin="35,274,0,0" VerticalAlignment="Top" Width="106" RenderTransformOrigin="-1.427,0.444" Height="42" Click="Button_Click"/>
+        <Button Content="Clear" HorizontalAlignment="Left" Margin="165,274,0,0" VerticalAlignment="Top" Width="106" RenderTransformOrigin="-1.427,0.444" Height="42" Grid.ColumnSpan="2"/>
+        <Button Content="Delete" HorizontalAlignment="Left" Margin="75,274,0,0" VerticalAlignment="Top" Width="106" RenderTransformOrigin="-1.427,0.444" Height="42" Grid.Column="1"/>
+
+
+    </Grid>
+</Controls:MetroWindow>

@@ -1,0 +1,49 @@
+﻿<Controls:MetroWindow
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BillSystem"
+        xmlns:mah="http://metro.mahapps.com/winfx/xaml/shared" x:Class="BillSystem.MainWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525" Foreground="White" IsMaxRestoreButtonEnabled="False" IsMinButtonEnabled="False" WindowStartupLocation="CenterScreen">
+    <Controls:MetroWindow.Resources>
+        <mah:ClockDegreeConverter x:Key="ClockDegreeConverter"/>
+    </Controls:MetroWindow.Resources>
+    <Grid MaxWidth="600" MaxHeight="400">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="195*"/>
+            <ColumnDefinition Width="322*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.Effect>
+            <DropShadowEffect/>
+        </Grid.Effect>
+        <Controls:Tile x:Name="BillWindow" Title="Create Bill" 
+               Width="225"
+               Height="100" 
+               Count="Bill" Margin="59,27,233,192" Click="Tile_Click" Background="#CC119EDA" Grid.ColumnSpan="2" >
+            <Controls:Tile.BindingGroup>
+                <BindingGroup/>
+            </Controls:Tile.BindingGroup>
+        </Controls:Tile>
+        <Controls:Tile Title="Company" 
+               Width="100"
+               Height="100" 
+               Count="" Margin="184,159,233,60" Grid.ColumnSpan="2" Click="Tile_Click_2" />
+        <Controls:Tile Title="Bowser" 
+               Width="100"
+               Height="100" 
+               Count="" Margin="59,159,36,60" Click="Tile_Click_1" />
+        <Controls:Tile Title="Employee" 
+               Width="100"
+               Height="100" 
+               Count="" Margin="151,27,71,192" Grid.Column="1" />
+        <Controls:Tile Title="Hello!" 
+            Width="100"
+            Height="100" 
+            Count="1" Margin="151,159,71,60" Grid.Column="1" />
+    </Grid>
+
+
+</Controls:MetroWindow>
