@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BillSystem.Model.Bowser
 {
-    public class bowser
+    public class BowserVM
     {
         public int Id { get; set; }
         public string BowserNoPlate { get; set; }

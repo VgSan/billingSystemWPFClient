@@ -42,6 +42,8 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\ControlzEx.3.0.2.4\lib\net45\System.Windows.Interactivity.dll</HintPath>
       <Private>True</Private>
@@ -76,6 +78,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="ApiOperation\BowserApiClient.cs" />
+    <Compile Include="ApiOperation\_apiOperationUtility.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -96,7 +100,7 @@
     <Compile Include="Model\Bill\BowserDropDown.cs" />
     <Compile Include="Model\Bill\CompanyDropDown.cs" />
     <Compile Include="Model\Bill\EmployeeDropDown.cs" />
-    <Compile Include="Model\Bowser\bowser.cs" />
+    <Compile Include="Model\Bowser\BowserVM.cs" />
     <Compile Include="Model\Company\Company.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
